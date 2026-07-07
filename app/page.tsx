@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import LiveStatus from "@/components/LiveStatus";
 import BiggestWins from "@/components/BiggestWins";
 import StreamSchedule from "@/components/StreamSchedule";
+
 export default function Home() {
   return (
     <>

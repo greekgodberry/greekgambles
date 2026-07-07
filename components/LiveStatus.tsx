@@ -1,3 +1,5 @@
+const isLive = false;
+
 export default function LiveStatus() {
   return (
     <section className="bg-black px-6 py-8 text-white">
@@ -8,12 +10,18 @@ export default function LiveStatus() {
           </p>
 
           <h2 className="mt-2 text-3xl font-black">
-            <span className="mr-2 inline-block h-3 w-3 animate-pulse rounded-full bg-red-500"></span>
-            LIVE CONTROL CENTER
+            <span
+              className={`mr-2 inline-block h-3 w-3 rounded-full ${
+                isLive ? "animate-pulse bg-red-500" : "bg-zinc-500"
+              }`}
+            ></span>
+            {isLive ? "LIVE RIGHT NOW" : "CURRENTLY OFFLINE"}
           </h2>
 
           <p className="mt-2 text-zinc-400">
-            Live streams, latest VODs, bonus buys, and community action all start here.
+            {isLive
+              ? "Greek God Berry is live on Kick. Come watch the action."
+              : "Catch the latest VODs, clips, bonus buys, and stream highlights."}
           </p>
         </div>
 
@@ -23,7 +31,7 @@ export default function LiveStatus() {
             target="_blank"
             className="rounded-xl bg-red-600 px-8 py-4 text-center font-bold text-white hover:bg-red-500"
           >
-            WATCH LIVE
+            {isLive ? "WATCH LIVE" : "WATCH KICK"}
           </a>
 
           <a
