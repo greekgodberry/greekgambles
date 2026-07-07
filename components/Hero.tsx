@@ -39,7 +39,7 @@ function handleMouseMove(e: React.MouseEvent<HTMLElement>) {
 </h1>
 
          <p className="hero-animate hero-delay-3 mt-6 max-w-xl text-xl text-zinc-200">
-         The home of massive wins, insane reactions, bonus buys, and the fastest-growing gambling community on Kick.
+        The home of massive wins, insane reactions, bonus buys, and the #1 gambling community on Kick.
           </p>
 
           <div className="mt-10 flex flex-col gap-5 sm:flex-row">
