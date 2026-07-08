@@ -6,6 +6,7 @@ import BiggestWins from "@/components/BiggestWins";
 import StreamSchedule from "@/components/StreamSchedule";
 import Offers from "@/components/Offers";
 import Socials from "@/components/Socials";
+import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <StreamSchedule />
       <Offers />
       <Socials />
+      <FinalCTA />
       <Footer />
     </main>
   );
