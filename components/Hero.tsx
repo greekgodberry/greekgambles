@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ParticlesBackground from "@/components/ParticlesBackground";
 
 export default function Hero() {
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
@@ -29,8 +30,9 @@ export default function Hero() {
         className="absolute inset-0 h-full w-full object-cover transition-transform duration-300"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/55 to-black/20" />
-      <div className="absolute inset-0 bg-black/20" />
+      <ParticlesBackground />
+
+      <div className="absolute inset-0 z-[6] bg-gradient-to-r from-black/80 via-black/35 to-black/5" />
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center pt-24">
         <div className="max-w-3xl">
