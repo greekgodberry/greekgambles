@@ -7,9 +7,9 @@ const schedule = [
 
 export default function StreamSchedule() {
   return (
-    <section className="bg-black px-6 py-24 text-white">
-      <div className="mx-auto max-w-5xl text-center">
-        <p className="text-sm font-bold tracking-[0.4em] text-red-500">
+    <section className="bg-[#050505] px-6 py-24 text-white">
+      <div className="mx-auto max-w-7xl text-center">
+        <p className="text-sm font-black tracking-[0.4em] text-red-500">
           WHEN TO WATCH
         </p>
 
@@ -17,14 +17,14 @@ export default function StreamSchedule() {
           STREAM SCHEDULE
         </h2>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-2">
+        <div className="mt-10 grid gap-5 md:grid-cols-4">
           {schedule.map(([day, time]) => (
             <div
               key={day}
-              className="rounded-2xl border border-zinc-800 bg-zinc-950 p-6"
+              className="rounded-3xl border border-zinc-800 bg-gradient-to-br from-zinc-950 to-black p-6 transition hover:-translate-y-1 hover:border-red-500 hover:shadow-2xl hover:shadow-red-600/10"
             >
               <p className="text-xl font-black">{day}</p>
-              <p className="mt-2 text-red-400">{time}</p>
+              <p className="mt-3 text-red-400">{time}</p>
             </div>
           ))}
         </div>
