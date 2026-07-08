@@ -20,7 +20,7 @@ export default function Navbar() {
           className="rounded-full border border-red-500 px-5 py-2 text-sm font-black text-red-400 transition hover:bg-red-600 hover:text-white"
         >
           <span className="flex items-center gap-2">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-red-500"></span>
+            <span className="h-2 w-2 animate-pulse rounded-full bg-red-500" />
             LIVE
           </span>
         </a>

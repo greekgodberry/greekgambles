@@ -10,8 +10,8 @@ export default function Hero() {
     const rect = e.currentTarget.getBoundingClientRect();
 
     setMouse({
-      x: (e.clientX - rect.left - rect.width / 2) / 55,
-      y: (e.clientY - rect.top - rect.height / 2) / 55,
+      x: (e.clientX - rect.left - rect.width / 2) / 65,
+      y: (e.clientY - rect.top - rect.height / 2) / 65,
     });
   }
 
@@ -32,7 +32,8 @@ export default function Hero() {
 
       <ParticlesBackground />
 
-      <div className="absolute inset-0 z-[6] bg-gradient-to-r from-black/80 via-black/35 to-black/5" />
+      <div className="absolute inset-0 z-[6] bg-gradient-to-r from-black/80 via-black/35 to-transparent" />
+      <div className="absolute inset-0 z-[6] bg-black/10" />
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center pt-24">
         <div className="max-w-3xl">
@@ -52,7 +53,7 @@ export default function Hero() {
             <a
               href="https://kick.com/greekgodberry"
               target="_blank"
-              className="rounded-xl bg-red-600 px-10 py-4 text-center text-lg font-black shadow-[0_0_45px_rgba(239,68,68,.45)] transition hover:scale-105 hover:bg-red-500"
+              className="main-cta rounded-xl bg-red-600 px-10 py-4 text-center text-lg font-black transition hover:scale-105 hover:bg-red-500"
             >
               🔴 WATCH LIVE
             </a>
