@@ -7,9 +7,9 @@ const wins = [
 
 export default function BiggestWins() {
   return (
-    <section className="bg-[#080808] px-6 py-24 text-white">
-      <div className="mx-auto max-w-6xl">
-        <p className="text-center text-sm font-bold tracking-[0.4em] text-red-500">
+    <section className="bg-black px-6 py-24 text-white">
+      <div className="mx-auto max-w-7xl">
+        <p className="text-center text-sm font-black tracking-[0.4em] text-red-500">
           HALL OF WINS
         </p>
 
@@ -21,12 +21,16 @@ export default function BiggestWins() {
           {wins.map((win) => (
             <div
               key={win.label}
-              className="rounded-3xl border border-red-500/25 bg-zinc-950 p-6 text-center transition hover:-translate-y-1 hover:border-red-500 hover:shadow-2xl hover:shadow-red-600/20"
+              className="group rounded-3xl border border-red-500/20 bg-gradient-to-br from-zinc-950 to-black p-6 text-center transition hover:-translate-y-2 hover:border-red-500 hover:shadow-2xl hover:shadow-red-600/20"
             >
-              <div className="text-4xl">{win.place}</div>
+              <div className="text-4xl transition group-hover:scale-110">
+                {win.place}
+              </div>
+
               <div className="mt-4 text-4xl font-black text-red-500">
                 {win.amount}
               </div>
+
               <p className="mt-3 text-zinc-400">{win.label}</p>
             </div>
           ))}
