@@ -8,10 +8,11 @@ import Offers from "@/components/Offers";
 import Socials from "@/components/Socials";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import MobileStickyCTA from "@/components/MobileStickyCTA";
 
 export default function Home() {
   return (
-    <main className="bg-black text-white">
+    <main className="bg-black pb-20 text-white md:pb-0">
       <Navbar />
       <Hero />
       <LiveStatus />
@@ -22,6 +23,7 @@ export default function Home() {
       <Socials />
       <FinalCTA />
       <Footer />
+      <MobileStickyCTA />
     </main>
   );
 }
