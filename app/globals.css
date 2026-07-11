@@ -51,6 +51,29 @@ body {
     0 0 80px rgba(239, 68, 68, 0.25);
 }
 
+.molten-pulse {
+  animation: molten-pulse 4.5s ease-in-out infinite;
+}
+
+@keyframes molten-pulse {
+  0%,
+  100% {
+    filter: brightness(1);
+    text-shadow:
+      0 0 18px rgba(239, 68, 68, 0.75),
+      0 0 42px rgba(249, 115, 22, 0.4),
+      0 0 80px rgba(239, 68, 68, 0.2);
+  }
+
+  50% {
+    filter: brightness(1.25);
+    text-shadow:
+      0 0 28px rgba(255, 70, 70, 0.95),
+      0 0 65px rgba(249, 115, 22, 0.65),
+      0 0 110px rgba(239, 68, 68, 0.35);
+  }
+}
+
 .main-cta {
   box-shadow:
     0 0 22px rgba(239, 68, 68, 0.45),
@@ -88,5 +111,58 @@ body {
   100% {
     transform: translateY(-110vh) translateX(18px) scale(0.9);
     opacity: 0;
+  }
+}
+
+.lightning-flash {
+  pointer-events: none;
+  background: radial-gradient(circle at 70% 15%, rgba(255, 255, 255, 0.22), transparent 28%);
+  opacity: 0;
+  animation: lightning 18s infinite;
+}
+
+@keyframes lightning {
+  0%,
+  92%,
+  100% {
+    opacity: 0;
+  }
+
+  93% {
+    opacity: 0.18;
+  }
+
+  93.5% {
+    opacity: 0;
+  }
+
+  94% {
+    opacity: 0.25;
+  }
+
+  95% {
+    opacity: 0;
+  }
+}
+
+.heat-haze {
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 90%, rgba(239, 68, 68, 0.16), transparent 30%),
+    radial-gradient(circle at 70% 90%, rgba(249, 115, 22, 0.12), transparent 32%);
+  filter: blur(18px);
+  animation: heat-breathe 6s ease-in-out infinite;
+}
+
+@keyframes heat-breathe {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 0.65;
+    transform: translateY(-8px);
   }
 }
